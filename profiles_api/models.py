@@ -17,7 +17,7 @@ class UserProfileManager(BaseUserManager):
         user.set_password(password) #Create a hash password to increase security
         user.save(using=self._db) # Standard django practise to saving objects in django
 
-        return User
+        return user
 
     def create_superuser(self, email, name, password):
         """Create and save a new superuser with given details"""
